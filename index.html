@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVO Store — Premium Streetwear</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.jpg" alt="OVO Logo" onerror="this.style.display='none'">
+                <span>OVO</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart<span class="cart-badge">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== Slideshow ===== -->
+    <div class="slideshow">
+        <div class="slide active" style="background-image: url('images/Hoodie-1.jpg');">
+            <div class="slide-content">
+                <h2>New Hoodie Collection</h2>
+                <p>Heavyweight comfort, signature owl detailing.</p>
+                <a href="shop.html?category=Hoodies" class="btn">Shop Hoodies</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('images/TShirt-1.jpg');">
+            <div class="slide-content">
+                <h2>Essential Tees</h2>
+                <p>Premium cotton in every cut.</p>
+                <a href="shop.html?category=T-Shirts" class="btn">Shop T-Shirts</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('images/Top-1.jpg');">
+            <div class="slide-content">
+                <h2>Tops & Layers</h2>
+                <p>Pieces designed for every season.</p>
+                <a href="shop.html?category=Tops" class="btn">Shop Tops</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('images/Cap-1.jpg');">
+            <div class="slide-content">
+                <h2>Accessories Drop</h2>
+                <p>Caps, beanies, bags & more.</p>
+                <a href="shop.html?category=Accessories" class="btn">Shop Accessories</a>
+            </div>
+        </div>
+
+        <button class="slide-arrow slide-prev" aria-label="Previous">&#10094;</button>
+        <button class="slide-arrow slide-next" aria-label="Next">&#10095;</button>
+        <div class="slide-dots"></div>
+    </div>
+
+    <!-- ===== Featured Section ===== -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Featured Picks</h2>
+            <p class="section-subtitle">Our most-loved drops this season</p>
+            <div class="product-grid" id="featured-grid">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Categories Banner ===== -->
+    <section class="container">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="product-grid" id="cat-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+            <a href="shop.html?category=Hoodies" class="product-card">
+                <div class="img-wrap" style="background-image: url('images/Hoodie-2.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="info"><span class="name">Hoodies</span></div>
+            </a>
+            <a href="shop.html?category=T-Shirts" class="product-card">
+                <div class="img-wrap" style="background-image: url('images/TShirt-2.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="info"><span class="name">T-Shirts</span></div>
+            </a>
+            <a href="shop.html?category=Tops" class="product-card">
+                <div class="img-wrap" style="background-image: url('images/Top-2.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="info"><span class="name">Tops</span></div>
+            </a>
+            <a href="shop.html?category=Accessories" class="product-card">
+                <div class="img-wrap" style="background-image: url('images/Bag-1.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="info"><span class="name">Accessories</span></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== CTA Banner ===== -->
+    <div class="container">
+        <div class="cta-banner">
+            <h2>Free Shipping Over P1000</h2>
+            <p>Join the OVO community for early access to new drops.</p>
+            <a href="shop.html" class="btn">Shop All</a>
+        </div>
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h4>OVO Store</h4>
+                <p style="font-size:14px;line-height:1.7;">Premium streetwear inspired by the night. Built for those who move different.</p>
+            </div>
+            <div>
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="shop.html?category=Hoodies">Hoodies</a></li>
+                    <li><a href="shop.html?category=T-Shirts">T-Shirts</a></li>
+                    <li><a href="shop.html?category=Tops">Tops</a></li>
+                    <li><a href="shop.html?category=Accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 OVO Store. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Render featured products on home page
+        (async function () {
+            const products = await fetchProducts();
+            const featured = products.filter(p => p.featured);
+            document.getElementById('featured-grid').innerHTML = featured.map(renderProductCard).join('');
+            bindQuickAddButtons(products);
+        })();
+    </script>
+</body>
+</html>
