@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop — OVO Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.jpg" alt="OVO Logo" onerror="this.style.display='none'">
+                <span>OVO</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart<span class="cart-badge">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Shop All</h1>
+
+        <div class="shop-layout">
+            <!-- Sidebar -->
+            <aside class="filter-sidebar">
+                <h3>Categories</h3>
+                <ul class="filter-list" id="cat-filters">
+                    <!-- Filled by JS -->
+                </ul>
+
+                <h3>Price Range</h3>
+                <div style="font-size:13px; color: var(--ink-soft);">
+                    <label style="display:block; margin-bottom:6px;">Max: <span id="price-symbol">P</span><span id="price-val">1500</span></label>
+                    <input type="range" id="price-range" min="200" max="1500" value="1500" step="50" style="width:100%;">
+                </div>
+            </aside>
+
+            <!-- Main Area -->
+            <div>
+                <div class="shop-controls">
+                    <span class="result-count" id="result-count">Loading...</span>
+                    <select id="sort-select">
+                        <option value="default">Sort: Default</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="name">Name: A-Z</option>
+                    </select>
+                </div>
+                <div class="product-grid" id="shop-grid">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h4>OVO Store</h4>
+                <p style="font-size:14px;line-height:1.7;">Premium streetwear inspired by the night.</p>
+            </div>
+            <div>
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="shop.html?category=Hoodies">Hoodies</a></li>
+                    <li><a href="shop.html?category=T-Shirts">T-Shirts</a></li>
+                    <li><a href="shop.html?category=Tops">Tops</a></li>
+                    <li><a href="shop.html?category=Accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 OVO Store. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

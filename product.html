@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product — OVO Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.jpg" alt="OVO Logo" onerror="this.style.display='none'">
+                <span>OVO</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart<span class="cart-badge">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="product-container">
+            <p style="text-align:center; padding:40px;">Loading product...</p>
+        </div>
+
+        <h2 class="section-title" style="margin-top:60px;">You May Also Like</h2>
+        <div class="product-grid" id="related-grid"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h4>OVO Store</h4>
+                <p style="font-size:14px;line-height:1.7;">Premium streetwear inspired by the night.</p>
+            </div>
+            <div>
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="shop.html?category=Hoodies">Hoodies</a></li>
+                    <li><a href="shop.html?category=T-Shirts">T-Shirts</a></li>
+                    <li><a href="shop.html?category=Tops">Tops</a></li>
+                    <li><a href="shop.html?category=Accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 OVO Store. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

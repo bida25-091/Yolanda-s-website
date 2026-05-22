@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart — OVO Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.jpg" alt="OVO Logo" onerror="this.style.display='none'">
+                <span>OVO</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="active cart-link">Cart<span class="cart-badge">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Your Cart</h1>
+
+        <div id="cart-content">
+            <p style="text-align:center; padding:40px;">Loading cart...</p>
+        </div>
+
+        <!-- ===== Checkout Section (hidden when cart empty) ===== -->
+        <div class="checkout-section" id="checkout-section" style="display:none;">
+            <h2>Checkout — Payment Details</h2>
+            <p style="color:var(--ink-soft); font-size:13px; margin-bottom:18px;">
+                Enter your card information to complete your order. All fields are validated before submission.
+            </p>
+
+            <!-- Card preview -->
+            <div class="card-preview" id="card-preview">
+                <div style="font-weight:bold; letter-spacing:2px;">OVO</div>
+                <div class="cp-number" id="cp-number">•••• •••• •••• ••••</div>
+                <div class="cp-row">
+                    <div><span class="small">Card Holder</span><span id="cp-name">FULL NAME</span></div>
+                    <div><span class="small">Expires</span><span id="cp-expiry">MM/YY</span></div>
+                </div>
+            </div>
+
+            <form id="checkout-form" novalidate>
+                <div class="form-grid">
+                    <div class="form-group full">
+                        <label for="ck-name">Cardholder Name</label>
+                        <input type="text" id="ck-name" placeholder="Full name on card" required>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="form-group full">
+                        <label for="ck-number">Card Number</label>
+                        <input type="text" id="ck-number" placeholder="1234 5678 9012 3456" maxlength="19" inputmode="numeric" required>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="ck-expiry">Expiry (MM/YY)</label>
+                        <input type="text" id="ck-expiry" placeholder="MM/YY" maxlength="5" inputmode="numeric" required>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="ck-cvv">CVV</label>
+                        <input type="text" id="ck-cvv" placeholder="123" maxlength="4" inputmode="numeric" required>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="form-group full">
+                        <label for="ck-email">Email (for receipt)</label>
+                        <input type="email" id="ck-email" placeholder="you@example.com" required>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="form-group full">
+                        <label for="ck-address">Shipping Address</label>
+                        <input type="text" id="ck-address" placeholder="Street, City, Country" required>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="form-group full">
+                        <button type="submit" class="btn btn-block" id="place-order-btn">Place Order</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="order-success" style="display:none; margin-top:20px; padding:20px; background:#e8f5e9; border-radius:6px;">
+                <h3 style="color:var(--success); margin-bottom:8px;">Order Placed Successfully</h3>
+                <p style="font-size:14px; margin-bottom:10px;">Order reference: <strong id="order-ref"></strong></p>
+                <p style="font-size:13px; color:var(--ink-soft); margin-bottom:14px;">
+                    Your order details have been saved. Click below to download a copy of your receipt.
+                </p>
+                <button class="btn btn-outline" id="download-receipt">Download Receipt (JSON)</button>
+                <a href="shop.html" class="btn" style="margin-left:8px;">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h4>OVO Store</h4>
+                <p style="font-size:14px;line-height:1.7;">Premium streetwear inspired by the night.</p>
+            </div>
+            <div>
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="shop.html?category=Hoodies">Hoodies</a></li>
+                    <li><a href="shop.html?category=T-Shirts">T-Shirts</a></li>
+                    <li><a href="shop.html?category=Tops">Tops</a></li>
+                    <li><a href="shop.html?category=Accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 OVO Store. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

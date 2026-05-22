@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — OVO Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.jpg" alt="OVO Logo" onerror="this.style.display='none'">
+                <span>OVO</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart<span class="cart-badge">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Get in Touch</h1>
+        <p class="section-subtitle">Questions, collaborations, or just to say hi — we're here.</p>
+
+        <div class="contact-layout">
+            <div class="contact-info">
+                <h2>Reach Us</h2>
+                <p>We typically respond within 24 hours.</p>
+
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <div><strong>Address</strong><br>
+                    <span style="color:var(--ink-soft);">Main Mall, Office 23, Gaborone, Botswana</span></div>
+                </div>
+                <div class="info-item">
+                    <span class="icon">📧</span>
+                    <div><strong>Email</strong><br>
+                    <span style="color:var(--ink-soft);">support@ovostore.com</span></div>
+                </div>
+                <div class="info-item">
+                    <span class="icon">📞</span>
+                    <div><strong>Phone</strong><br>
+                    <span style="color:var(--ink-soft);">+267 75638790</span></div>
+                </div>
+                <div class="info-item">
+                    <span class="icon">🕐</span>
+                    <div><strong>Hours</strong><br>
+                    <span style="color:var(--ink-soft);">Mon–Sat: 9:00 — 18:00</span></div>
+                </div>
+            </div>
+
+            <div>
+                <form id="contact-form" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="cf-name">Name</label>
+                            <input type="text" id="cf-name" required>
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-email">Email</label>
+                            <input type="email" id="cf-email" required>
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group full">
+                            <label for="cf-subject">Subject</label>
+                            <input type="text" id="cf-subject" required>
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group full">
+                            <label for="cf-message">Message</label>
+                            <textarea id="cf-message" rows="6" required></textarea>
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group full">
+                            <button type="submit" class="btn btn-block">Send Message</button>
+                        </div>
+                    </div>
+                    <div id="form-success">Thanks — your message has been received. We'll get back to you soon.</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h4>OVO Store</h4>
+                <p style="font-size:14px;line-height:1.7;">Premium streetwear inspired by the night.</p>
+            </div>
+            <div>
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="shop.html?category=Hoodies">Hoodies</a></li>
+                    <li><a href="shop.html?category=T-Shirts">T-Shirts</a></li>
+                    <li><a href="shop.html?category=Tops">Tops</a></li>
+                    <li><a href="shop.html?category=Accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 OVO Store. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const fields = ['cf-name', 'cf-email', 'cf-subject', 'cf-message'];
+            let valid = true;
+            fields.forEach(id => {
+                const el = document.getElementById(id);
+                const errEl = el.parentElement.querySelector('.error-text');
+                errEl.textContent = '';
+                el.classList.remove('invalid');
+                if (!el.value.trim()) {
+                    errEl.textContent = 'This field is required.';
+                    el.classList.add('invalid');
+                    valid = false;
+                } else if (id === 'cf-email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)) {
+                    errEl.textContent = 'Please enter a valid email.';
+                    el.classList.add('invalid');
+                    valid = false;
+                }
+            });
+
+            if (valid) {
+                document.getElementById('form-success').style.display = 'block';
+                this.reset();
+                showToast('Message sent.');
+                setTimeout(() => document.getElementById('form-success').style.display = 'none', 5000);
+            }
+        });
+    </script>
+</body>
+</html>

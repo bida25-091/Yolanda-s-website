@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "OVO Classic Owl Hoodie",
+    "category": "Hoodies",
+    "price": 1199.00,
+    "image": "images/Hoodie-1.jpg",
+    "description": "Heavyweight cotton-blend hoodie featuring the iconic OVO owl embroidery on the chest. Brushed inner fleece for premium comfort.",
+    "sizes": ["S", "M", "L", "XL"],
+    "stock": 25,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "OVO Midnight Pullover Hoodie",
+    "category": "Hoodies",
+    "price": 1349.00,
+    "image": "images/Hoodie-2.jpg",
+    "description": "Midnight black pullover with tonal owl logo and ribbed cuffs. Designed for everyday wear.",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "stock": 18,
+    "featured": false
+  },
+  {
+    "id": 3,
+    "name": "OVO Essential T-Shirt",
+    "category": "T-Shirts",
+    "price": 539.00,
+    "image": "images/TShirt-1.jpg",
+    "description": "Soft 100% cotton crewneck tee with screen-printed OVO logo. A wardrobe essential.",
+    "sizes": ["S", "M", "L", "XL"],
+    "stock": 40,
+    "featured": true
+  },
+  {
+    "id": 4,
+    "name": "OVO Owl Graphic Tee",
+    "category": "T-Shirts",
+    "price": 609.00,
+    "image": "images/TShirt-2.jpg",
+    "description": "Bold front graphic tee made from premium ringspun cotton. Relaxed fit.",
+    "sizes": ["S", "M", "L", "XL"],
+    "stock": 30,
+    "featured": false
+  },
+  {
+    "id": 5,
+    "name": "OVO Cropped Tank Top",
+    "category": "Tops",
+    "price": 469.00,
+    "image": "images/Top-1.jpg",
+    "description": "Lightweight cropped tank with subtle owl detail. Perfect for layering or solo wear.",
+    "sizes": ["XS", "S", "M", "L"],
+    "stock": 22,
+    "featured": true
+  },
+  {
+    "id": 6,
+    "name": "OVO Long Sleeve Henley",
+    "category": "Tops",
+    "price": 739.00,
+    "image": "images/Top-2.jpg",
+    "description": "Three-button henley in heavyweight cotton, finished with embroidered logo at hem.",
+    "sizes": ["S", "M", "L", "XL"],
+    "stock": 15,
+    "featured": false
+  },
+  {
+    "id": 7,
+    "name": "OVO Snapback Cap",
+    "category": "Accessories",
+    "price": 399.00,
+    "image": "images/Cap-1.jpg",
+    "description": "Adjustable snapback with raised owl embroidery. Structured six-panel build.",
+    "sizes": ["One Size"],
+    "stock": 50,
+    "featured": true
+  },
+  {
+    "id": 8,
+    "name": "OVO Knit Beanie",
+    "category": "Accessories",
+    "price": 339.00,
+    "image": "images/Beanie-1.jpg",
+    "description": "Cozy ribbed-knit beanie with woven owl tag. Soft acrylic blend keeps you warm.",
+    "sizes": ["One Size"],
+    "stock": 35,
+    "featured": false
+  },
+  {
+    "id": 9,
+    "name": "OVO Crossbody Bag",
+    "category": "Accessories",
+    "price": 939.00,
+    "image": "images/Bag-1.jpg",
+    "description": "Compact crossbody with adjustable strap and dual zip compartments. Water-resistant nylon.",
+    "sizes": ["One Size"],
+    "stock": 12,
+    "featured": false
+  },
+  {
+    "id": 10,
+    "name": "OVO Zip-Up Hoodie Grey",
+    "category": "Hoodies",
+    "price": 1479.00,
+    "image": "images/Hoodie-3.jpg",
+    "description": "Full-zip hoodie in heather grey with side pockets and adjustable drawstrings.",
+    "sizes": ["S", "M", "L", "XL"],
+    "stock": 20,
+    "featured": false
+  },
+  {
+    "id": 11,
+    "name": "OVO Striped Polo",
+    "category": "Tops",
+    "price": 669.00,
+    "image": "images/Top-3.jpg",
+    "description": "Classic polo with subtle horizontal stripes and embroidered owl on chest.",
+    "sizes": ["S", "M", "L", "XL"],
+    "stock": 18,
+    "featured": false
+  },
+  {
+    "id": 12,
+    "name": "OVO Logo Socks (3-Pack)",
+    "category": "Accessories",
+    "price": 269.00,
+    "image": "images/Socks-1.jpg",
+    "description": "Three pairs of crew socks with ribbed cuffs and woven OVO branding.",
+    "sizes": ["One Size"],
+    "stock": 60,
+    "featured": false
+  }
+]
